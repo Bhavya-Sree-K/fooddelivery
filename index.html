@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Best Food for Everyone - Authentic Indian cuisine delivered fast. Hyderabadi Biryani, Masala Dosa, Butter Chicken, and more from top-rated local kitchens.">
+  <title>Best Food for Everyone | Indian Food Delivery</title>
+
+  <!-- Favicon: Serving Cloche SVG Data URI -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='30' fill='%23D97742'/%3E%3Cellipse cx='32' cy='44' rx='18' ry='3' fill='%23fff' opacity='.95'/%3E%3Cpath d='M14 44c0-12 8-22 18-22s18 10 18 22' fill='none' stroke='%23fff' stroke-width='3' stroke-linecap='round'/%3E%3Ccircle cx='32' cy='19' r='2.5' fill='%23fff'/%3E%3C/svg%3E">
+
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- ===== Header / Navigation ===== -->
+  <header id="main-header">
+    <div class="container nav-container">
+      <!-- Logo -->
+      <a href="#" class="logo" id="nav-logo">
+        <div class="logo-icon">
+          <!-- Plate & Steam SVG -->
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 19c-4.4 0-8-1.3-8-3V14"></path>
+            <path d="M20 14v2c0 1.7-3.6 3-8 3"></path>
+            <path d="M4 14c0-4.4 3.6-8 8-8s8 3.6 8 8"></path>
+            <circle cx="12" cy="5" r="1"></circle>
+            <line x1="8" y1="3" x2="8" y2="5"></line>
+            <line x1="16" y1="3" x2="16" y2="5"></line>
+          </svg>
+        </div>
+        <span class="logo-text">Best<span class="logo-accent">Food</span></span>
+      </a>
+
+      <!-- Desktop Navigation -->
+      <nav id="desktop-nav">
+        <ul>
+          <li>
+            <a href="#" class="active" id="link-home">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
+              Home
+            </a>
+          </li>
+          <li>
+            <a href="#menu" id="link-menu">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8h1a4 4 0 0 1 0 8h-1"></path><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"></path><line x1="6" y1="1" x2="6" y2="4"></line><line x1="10" y1="1" x2="10" y2="4"></line><line x1="14" y1="1" x2="14" y2="4"></line></svg>
+              Menu
+            </a>
+          </li>
+          <li>
+            <a href="#restaurants" id="link-restaurants">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3h18v18H3z"></path><path d="M3 9h18"></path><path d="M9 21V9"></path></svg>
+              Restaurants
+            </a>
+          </li>
+          <li>
+            <a href="#offers" id="link-offers">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path><line x1="7" y1="7" x2="7.01" y2="7"></line></svg>
+              Offers
+            </a>
+          </li>
+        </ul>
+      </nav>
+
+      <!-- Header Actions -->
+      <div class="header-actions">
+        <!-- Cart Toggle -->
+        <button class="cart-toggle" id="cart-toggle-btn" aria-label="Open shopping cart">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="8" cy="21" r="1"></circle>
+            <circle cx="19" cy="21" r="1"></circle>
+            <path d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.12"></path>
+          </svg>
+          <span class="cart-badge" id="cart-count">0</span>
+        </button>
+
+        <!-- Mobile Menu Toggle -->
+        <button class="menu-mobile-btn" id="mobile-menu-btn" aria-label="Toggle navigation menu">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="4" y1="12" x2="20" y2="12"></line>
+            <line x1="4" y1="6" x2="20" y2="6"></line>
+            <line x1="4" y1="18" x2="20" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Navigation Drawer -->
+    <div class="mobile-nav" id="mobile-nav-menu">
+      <ul>
+        <li><a href="#" id="mobile-link-home">Home</a></li>
+        <li><a href="#menu" id="mobile-link-menu">Menu</a></li>
+        <li><a href="#restaurants" id="mobile-link-restaurants">Restaurants</a></li>
+        <li><a href="#offers" id="mobile-link-offers">Offers</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <!-- ===== Hero Section with Background Video ===== -->
+  <section class="hero" id="hero">
+    <!-- Animated gradient fallback (visible if video fails to load) -->
+    <div class="hero-fallback-bg"></div>
+
+    <!-- Looping Background Video — Authentic Food Delivery Playback -->
+    <video class="hero-video" id="hero-video" autoplay loop muted playsinline poster="images/biryani.png">
+      <source src="images/hero-video.mp4" type="video/mp4">
+      <source src="https://videos.pexels.com/video-files/5836567/5836567-hd_1920_1080_25fps.mp4" type="video/mp4">
+      <source src="https://videos.pexels.com/video-files/5494696/5494696-hd_1920_1080_30fps.mp4" type="video/mp4">
+      <source src="https://videos.pexels.com/video-files/3298572/3298572-hd_1920_1080_30fps.mp4" type="video/mp4">
+      Your browser does not support HTML5 video.
+    </video>
+    <div class="hero-overlay"></div>
+
+    <div class="container hero-content">
+      <span class="hero-label">🍛 Fastest Indian Food Delivery</span>
+      <h1 class="hero-title">Authentic Indian<br>Flavours, Delivered</h1>
+      <p class="hero-description">From sizzling Biryanis to crispy Dosas — order your favourite Indian dishes from the best local kitchens, delivered hot to your doorstep.</p>
+      <a href="#menu" class="btn-primary btn-hero" id="hero-cta-btn">
+        Explore Menu
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+      </a>
+    </div>
+  </section>
+
+  <!-- ===== Promotional Offer Banner ===== -->
+  <section class="promo-banner" id="offers">
+    <div class="container promo-banner-inner">
+      <div class="promo-img-wrapper">
+        <img src="images/biryani.png" alt="Delicious Indian food spread" class="promo-img" loading="lazy">
+      </div>
+      <div class="promo-text">
+        <span class="promo-tag">Festive Offer</span>
+        <h2>Get ₹100 Off Your First Order</h2>
+        <p>Use code <strong class="promo-code-highlight">WELCOME100</strong> at checkout and enjoy premium flavors at a discount. Free delivery on orders over ₹300!</p>
+        <a href="#menu" class="btn-primary">Order Now
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Browse Categories ===== -->
+  <section class="categories-section" id="categories">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">Browse by Category</span>
+        <h2 class="section-title">What Are You Craving?</h2>
+      </div>
+      <div class="categories-grid" id="categories-grid">
+        <button class="category-card active" data-category="all">
+          <div class="category-img-wrapper">
+            <img src="images/butter-chicken.png" alt="All food items" loading="lazy">
+          </div>
+          <span>All</span>
+        </button>
+        <button class="category-card" data-category="biryanis">
+          <div class="category-img-wrapper">
+            <img src="images/biryani.png" alt="Biryanis" loading="lazy">
+          </div>
+          <span>Biryanis</span>
+        </button>
+        <button class="category-card" data-category="dosas">
+          <div class="category-img-wrapper">
+            <img src="images/dosa.png" alt="Dosas" loading="lazy">
+          </div>
+          <span>Dosas & Breads</span>
+        </button>
+        <button class="category-card" data-category="curries">
+          <div class="category-img-wrapper">
+            <img src="images/paneer.png" alt="Curries" loading="lazy">
+          </div>
+          <span>Curries</span>
+        </button>
+        <button class="category-card" data-category="chaats">
+          <div class="category-img-wrapper">
+            <img src="images/samosa.png" alt="Chaats" loading="lazy">
+          </div>
+          <span>Chaats & Starters</span>
+        </button>
+        <button class="category-card" data-category="desserts">
+          <div class="category-img-wrapper">
+            <img src="images/gulab-jamun.png" alt="Desserts" loading="lazy">
+          </div>
+          <span>Desserts & Lassi</span>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Popular Restaurants ===== -->
+  <section class="restaurants-section" id="restaurants">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">Partner Kitchens</span>
+        <h2 class="section-title">Popular Restaurants Near You</h2>
+      </div>
+      <div class="restaurants-grid" id="restaurants-grid">
+        <!-- Rendered by app.js -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Menu / Dish Catalog ===== -->
+  <section class="menu-section" id="menu">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">Our Menu</span>
+        <h2 class="section-title">Explore Delicious Dishes</h2>
+      </div>
+
+      <!-- Search Bar -->
+      <div class="menu-toolbar">
+        <div class="search-wrapper">
+          <svg class="search-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="11" cy="11" r="8"></circle>
+            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+          </svg>
+          <input type="text" class="search-input" id="search-input" placeholder="Search for dishes...">
+        </div>
+      </div>
+
+      <!-- Menu Grid (populated by app.js) -->
+      <div class="menu-grid" id="menu-grid">
+        <!-- Rendered items go here -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Shopping Cart Sidebar Drawer ===== -->
+  <div class="cart-drawer-overlay" id="cart-drawer-overlay">
+    <div class="cart-drawer" id="cart-drawer">
+      <div class="cart-header">
+        <h3>Your Cart</h3>
+        <button class="cart-close-btn" id="cart-close-btn" aria-label="Close cart">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="18" y1="6" x2="6" y2="18"></line>
+            <line x1="6" y1="6" x2="18" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+
+      <!-- Cart Items List -->
+      <div class="cart-items" id="cart-items-container">
+        <!-- JS-rendered list of cart items or empty state -->
+      </div>
+
+      <!-- Promo Code + Totals Footer -->
+      <div class="cart-footer" id="cart-footer">
+        <div class="promo-input-row">
+          <input type="text" class="promo-input" id="promo-code-input" placeholder="Enter promo code">
+          <button class="promo-apply-btn" id="promo-apply-btn">Apply</button>
+        </div>
+        <div class="promo-status" id="promo-status"></div>
+
+        <div class="cart-summary-row">
+          <span>Subtotal</span>
+          <span id="cart-subtotal">₹0.00</span>
+        </div>
+        <div class="cart-summary-row discount-row" id="discount-row" style="display:none;">
+          <span>Discount</span>
+          <span id="cart-discount" class="discount-value">-₹0.00</span>
+        </div>
+        <div class="cart-summary-row">
+          <span>Delivery Fee</span>
+          <span id="cart-delivery">₹0.00</span>
+        </div>
+        <div class="cart-summary-total">
+          <span>Total</span>
+          <span id="cart-total">₹0.00</span>
+        </div>
+        <button class="btn-primary" id="checkout-btn" style="width: 100%;">
+          Proceed to Checkout
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== Checkout / Order Tracking Modal ===== -->
+  <div class="modal-overlay" id="checkout-modal-overlay">
+    <div class="checkout-modal" id="checkout-modal">
+      <div class="checkout-modal-header">
+        <h3 id="modal-header-title">Delivery Details</h3>
+        <button class="checkout-modal-close" id="modal-close-btn" aria-label="Close dialog">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="18" y1="6" x2="6" y2="18"></line>
+            <line x1="6" y1="6" x2="18" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+      <div class="checkout-modal-body" id="modal-body-content">
+        <form id="checkout-form">
+          <div class="form-group">
+            <label for="cust-name">Full Name</label>
+            <input type="text" id="cust-name" class="form-input" placeholder="e.g. John Smith" required>
+          </div>
+          <div class="form-group">
+            <label for="cust-address">Delivery Address</label>
+            <input type="text" id="cust-address" class="form-input" placeholder="e.g. 142 Baker St, Suite 4B" required>
+          </div>
+          <div class="form-group">
+            <label for="cust-phone">Phone Number</label>
+            <input type="tel" id="cust-phone" class="form-input" placeholder="e.g. (555) 019-2834" required>
+          </div>
+          <div class="form-group">
+            <label for="cust-notes">Special Instructions</label>
+            <input type="text" id="cust-notes" class="form-input" placeholder="e.g. Ring the doorbell twice">
+          </div>
+          <div style="margin-top: var(--spacing-lg);">
+            <button type="submit" class="btn-primary" id="confirm-order-btn" style="width: 100%;">
+              Place Order
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== Footer ===== -->
+  <footer>
+    <div class="container footer-grid">
+      <div class="footer-col">
+        <a href="#" class="footer-logo">Best<span class="footer-logo-accent">Food</span></a>
+        <p class="footer-desc">Delivering happiness one meal at a time. Premium restaurant-quality food straight to your doorstep, fast and fresh.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Explore</h4>
+        <ul class="footer-links">
+          <li><a href="#menu">Full Menu</a></li>
+          <li><a href="#restaurants">Restaurants</a></li>
+          <li><a href="#offers">Deals & Offers</a></li>
+          <li><a href="#categories">Categories</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contact Us</h4>
+        <div class="footer-contact">
+          <p>12 Spice Lane, MG Road, Bengaluru</p>
+          <p>hello@bestfoodforeveryone.in</p>
+          <p>+91 98765 43210</p>
+          <p>Mon - Sun: 10:00 AM - 11:00 PM</p>
+        </div>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <p>2026 Best Food for Everyone. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="restaurants.js"></script>
+  <script src="menu-items.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
